@@ -1,0 +1,60 @@
+\documentclass{standalone}
+\usepackage{amsmath}
+\usepackage{tikz} 
+\usetikzlibrary{shapes,arrows,shapes.geometric,positioning,fit,calc}
+%include other needed packages here   
+
+\tikzstyle{database} = [draw, rectangle, draw=black, rounded corners, fill=orange!80, drop shadow,
+                        text centered, text=white, text width=3cm]
+                        
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, text width=6em, text badly centered, node distance=8em, inner sep=0pt, rounded corners, drop shadow]
+%\tikzstyle{decision} = [draw, diamond, fill=blue!50, node distance=9em, text width=7em, minimum height=4em, text centered,rounded corners]
+\tikzstyle{line}     = [draw, -latex']
+\tikzstyle{arc}      = [draw, arc]
+\tikzstyle{elli}     = [draw, ellipse, fill=red!50, drop shadow] 
+\tikzstyle{file}     = [draw, rectangle, fill=blue!50, node distance=8em, rounded corners, text width=6em, minimum height=4em, text centered, drop shadow]
+\tikzstyle{cyl}      = [draw, cylinder, fill=green!50, shape border rotate=90, minimum width=1cm, aspect=0.25, text width=1.3cm, text height=.2cm, text centered, 
+                         color=orange!40!black, left color=orange!70, right color=orange!80, middle color=white, drop shadow]
+\tikzstyle{algo}     = [draw, rectangle, fill=cyan!30, node distance=6em, text width=5em, minimum height=4em, text centered, drop shadow, rounded corners]
+\tikzstyle{box}      = [draw, rectangle, fill=green!60, node distance=3em, text width=8em, minimum height=3em, text centered, rounded corners,drop shadow]
+\tikzstyle{fig_box}  = [draw, rectangle, fill=yellow!50, rounded corners, text centered, drop shadow]
+
+
+\begin{document}
+
+\begin{tikzpicture}
+ %\node [elli, node distance=2em] (1) {\small{Start}};
+ %\node [box, below of=1, node distance=4em, rounded corners=false, fill=yellow!50, text width=7em] (2) {\small{For each model}};
+ \node [box, test width=15em, minimum heigth=10em] (1) {\small{}};
+ \node [cyl, node distance=8em, text width=1.7cm, text height=.2cm] (2) {\small{$A_{1,1,1}x=0$\\\hspace{.02in}\vdots\\$A_{1,1,k}x=0$}};
+ \node [cyl, right of=2, node distance=8em, text width=1.7cm, text height=.2cm] (3) {\small{$A_{1,j,1}x=0$\\\hspace{.02in}\vdots\\$A_{1,j,k}x=0$}}; 
+ %\node [box, below of=3, node distance=4em] (5) {\small{Compute  \textbf{R=A$\times$Y}}};
+ %\node [box, below of=5, node distance=4em] (6) {\small{Return all \textbf{R} matrices}};
+ %\node [elli, below of=6, node distance=4em] (7) {\small{Stop}};
+
+  %arrows
+  %\path [line, thick] (1)--(2);
+  %\draw [<->, dotted, thick] (3)--(4);
+  %\path [line, thick] (2)--(3);
+  %\path [line, thick] (3)--(5);
+  %\path [line, thick] (5)--(6);
+  %\path [line, thick] (6)--(7);
+  %\path [line, thick] (2)--node [near start, xshift=1em] {Yes} (3);
+  %\path [line, thick] (2)-| node [near start, yshift=.5em] {No} (4);
+  %\draw [<->, dotted, thick] (5)--(6);
+  %\draw [<->, dotted, thick] (4)--(7);
+  %\draw [<->, dotted, thick] (9)--(10);
+  %\path [line, thick] (3)--(11);
+  %\path [line, thick] (5)--++(-3.5,0)--++(0,.88);
+  
+  %\path [line, thick] (11)--(5);
+  %\path [line, thick] (5)--(8);
+  %\path [line, thick] (8)--(9);
+  
+  %\path [line, thick] (9)--++(-3.5,0)--++(0,2.3);
+  
+  %\path [line, thick] (9)--(12);
+  %\path [line, thick] (12)--(13);
+\end{tikzpicture}
+
+\end{document}
